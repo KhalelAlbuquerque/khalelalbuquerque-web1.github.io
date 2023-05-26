@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar</title>
+
+    <style>
+        body{
+            width: 40%;
+            margin: auto;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label{
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+        }
+
+        form input{
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        form input[type="submit"]{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .half{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .half-input{
+            width: 45%;
+        }
+
+        address{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .voltar{
+            font-size: 1.5em;
+        }
+
+        iframe{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a class="voltar" href="segunda.html">Voltar</a>
+
+    <h1>Agendamento de horario</h1>
+    
+    <form action="segunda.html">
+        <div class="half">
+            <div class="half-input">
+                <label for="name">Nome</label>
+                <input type="text" placeholder="Digite seu nome">
+            </div>
+            
+            <div class="half-input">
+                <label for="phone">Telefone</label>
+                <input type="text" placeholder="Digite seu telefone">
+            </div>
+        </div>
+
+        <label for="day">Data que deseja marcar</label>
+        <input type="date">
+
+        <label for="horario">Horas que deseja marcar</label>
+        <input type="time">
+
+        <input type="submit" value="Agendar">
+    </form>
+
+
+    <address>
+        <p>710 Beech St Texarkana</p>
+        <p>AR 71854</p>
+        <p>Estados Unidos</p>
+
+        <iframe style="float:right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1594.2761435137047!2d-94.04007303614675!3d33.4305173264008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86346a5da2d9ed77%3A0x318c55d10f872f5f!2sTaylor%20Auto%20Repair%20Services!5e0!3m2!1spt-BR!2sbr!4v1684526169794!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </address>
+
+</body>
+</html>
