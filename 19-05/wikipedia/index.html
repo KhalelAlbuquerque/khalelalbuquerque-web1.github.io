@@ -21,16 +21,23 @@
             margin: 0 auto;
         }
 
-        h1 a{
+        nav{
+            display: flex;
+        }
+
+        nav a{
+            display: block;
+            width: 150px;
+            margin: 10px 5px;
             text-decoration: none;
             padding: 10px 20px;
             color: white;
             border-radius: 10px;
-            background-color: rgb(110, 110, 243);
+            background-color: rgb(218, 58, 58);
         }
 
-        h1 a:hover{
-            background-color: rgb(144, 144, 236);
+        nav a:hover{
+            background-color: rgb(238, 105, 105);
         }
 
         h2{
@@ -43,7 +50,9 @@
             float: left; 
             height: 100px; 
             width: 170px;
-            margin-right: 20px;
+            margin-right: 5px;
+            padding-right: 25px;
+            border-right: 3px solid #ccc;
         }
 
         #servicos{
@@ -54,6 +63,9 @@
             margin: 0 0 10px 10px;
             width: 200px;
             float: right;
+            margin-left: 5px;
+            padding-left: 25px;
+            border-left: 3px solid #ccc;
         }
 
         p{
@@ -75,12 +87,12 @@
 <body>
     
     <header>
-        <h1>
+        <nav>
             <a href="https://www.youtube.com">Ir ao site</a>
             <a href="#origem">Origem do nome</a>
             <a href="#historia">Historia</a>
             <a href="#servicos">Servicos</a>
-        </h1>
+        </nav>
 
         <hr>
     </header>
@@ -95,7 +107,7 @@
 
             <figure>
                 <img class="logo-youtube"
-                src="./public/img/new-youtube-logo-840x402.webp" alt="Logo YT">
+                src="../public/img/new-youtube-logo-840x402.webp" alt="Logo YT">
             </figure>
 
             <p>
