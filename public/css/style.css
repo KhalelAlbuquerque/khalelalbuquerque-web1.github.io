@@ -48,7 +48,7 @@ main{
     height: 330px;
     padding: 40px 15px;
     box-sizing: border-box;
-    width: 29%;
+    width: 47%;
     border-radius: 5px;
     background-color: #bbb;
     box-shadow: 0 0 5px 2px #4b4b4b;
@@ -60,7 +60,7 @@ main{
 }
 
 .card h3{
-    margin: 10px auto;
+    margin: 30px auto;
 }
 
 .card .overlay{
