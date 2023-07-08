@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Voluntarios</title>
+</head>
+<body>
+   <header>
+
+
+        <div class="homepage-search">
+            <a href="home.html" class="logo"><img src="./public/img/logo_header.svg" alt="#"></a>
+
+             <div class="barra-pesquisa">
+
+                <a href="all-jobs.html" class="botao-pesquisa">
+                    <img src="./public/img/lupa.svg" alt="" class="icone-pesquisa">
+                </a>
+                
+                <form class="barra-texto" action="/posts/">
+                    <input type="text"  placeholder="Pesquisar">
+                </form>
+            </div>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Sou uma ONG</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+   </header>
+
+
+    <main>
+        <section class="site-presentation-macro">
+            <div class="site-presentation">
+                <p>
+                    Faça a diferença! Descubra oportunidades de trabalho
+                    voluntário em ONGs comprometidas com causas sociais,
+                    ambientais e educacionais. Encontre a 
+                    vaga ideal para você e deixe o seu legado. 
+                    Seja voluntário e impacte vidas!
+                </p>
+
+                <img src="./public/img/ong_semFundo 1.png" alt="" class="ongSemFundo">
+            </div>
+
+            <a href="all-jobs.html" class="make-difference">Quero fazer a diferença</a>
+        </section>
+
+        <section class="find-job">
+            <h2>
+                Encontre a vaga certa para você
+            </h2>
+
+            <div class="jobs-home">
+                <a href="all-jobs.html">Ver mais</a>
+
+                <div id="wrapper">
+                    <div id="carousel">
+                        <div id="content">
+                            <div class="card">
+                                <img src="./public/img/projeto_logo.jpg" alt="">
+
+                                <h2>
+                                    Descrição
+                                </h2>
+
+                                <a class="see-job" href="all-jobs.html"><span>Ver vaga</span></a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./public/img/projeto_logo.jpg" alt="">
+
+                                <h2>
+                                    Descrição
+                                </h2>
+
+                                <a class="see-job" href="all-jobs.html"><span>Ver vaga</span></a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./public/img/projeto_logo.jpg" alt="">
+
+                                <h2>
+                                    Descrição
+                                </h2>
+
+                                <a class="see-job" href="all-jobs.html"><span>Ver vaga</span></a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./public/img/projeto_logo.jpg" alt="">
+
+                                <h2>
+                                    Descrição
+                                </h2>
+
+                                <a class="see-job" href="all-jobs.html"><span>Ver vaga</span></a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./public/img/projeto_logo.jpg" alt="">
+
+                                <h2>
+                                    Descrição
+                                </h2>
+
+                                <a class="see-job" href="all-jobs.html"><span>Ver vaga</span></a>
+                            </div>
+
+                            <div class="card">
+                                <a class="see-more" href="all-jobs.html">Ver todos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="prev">
+                        <img src="./public/img/prev.svg" alt="">
+                    </button>
+                    <button id="next">
+                        <img src="./public/img/next.svg" alt="">
+                    </button>
+                </div>
+        </section>
+
+        <script>
+
+            const gap = 16;
+
+            const carousel = document.getElementById("carousel"),
+            content = document.getElementById("content"),
+            next = document.getElementById("next"),
+            prev = document.getElementById("prev");
+
+            next.addEventListener("click", e => {
+                carousel.scrollBy(width + gap, 0)
+                if (carousel.scrollWidth !== 0) {
+                    prev.style.display = "flex"
+                }
+                if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                    next.style.display = "none"
+                }
+            })
+
+            prev.addEventListener("click", e => {
+                carousel.scrollBy(-(width + gap), 0);
+                if (carousel.scrollLeft - width - gap <= 0) {
+                    prev.style.display = "none"
+                }
+                if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                    next.style.display = "flex"
+                }
+            })
+
+            let width = carousel.offsetWidth;
+            window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+
+        </script>
+    </main>
+
+</body>
+</html>
